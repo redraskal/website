@@ -80,7 +80,7 @@ class Lanyard {
 const lanyard = new Lanyard(DISCORD_ID);
 const spotify = document.getElementById("spotify");
 
-lanyard.addEventListener(DISCORD_ID, (presence) => {
+lanyard.addEventListener(DISCORD_ID, presence => {
 	if (presence.spotify) {
 		let song = document.createElement("a");
 		song.href = `https://open.spotify.com/track/${presence.spotify.track_id}`;
