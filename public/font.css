@@ -1,0 +1,47 @@
+@font-face {
+	font-family: "Berkeley Mono";
+	font-display: swap;
+	font-style: normal;
+	src: url("/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Berkeley Mono";
+	font-display: swap;
+	font-style: italic;
+	src: url("/fonts/BerkeleyMonoVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Sevastopol Interface";
+	font-display: swap;
+	font-style: normal;
+	src: url("/fonts/Sevastopol-Interface.woff2") format("woff2");
+}
+
+:root {
+	--font-body: "Berkeley Mono";
+	--font-terminal: "Sevastopol Interface";
+	font-family: var(--font-body), -apple-system, sans-serif;
+	font-optical-sizing: auto;
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	color: var(--foreground);
+	background: var(--background);
+}
+
+samp {
+	display: block;
+	line-height: 0.7;
+	font-family: var(--font-terminal);
+	font-size: x-large;
+}
+
+pre {
+	font-family: var(--font-body);
+}

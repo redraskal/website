@@ -1,0 +1,16 @@
+:root {
+	--foreground: #FFFFFF;
+	--background: #000000;
+
+	--accent: #FFEE00;
+	--accent-light: #FFFCCC;
+
+	--green: #1DB954;
+	--green-light: #D2F1DD;
+}
+
+::selection {
+	color: var(--foreground);
+	background: var(--accent);
+	text-decoration: none;
+}

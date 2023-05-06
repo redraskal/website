@@ -1,0 +1,15 @@
+a {
+	color: var(--accent);
+}
+
+a:hover {
+	color: var(--accent-light);
+}
+
+a.green {
+	color: var(--green);
+}
+
+a.green:hover {
+	color: var(--green-light);
+}

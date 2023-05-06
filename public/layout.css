@@ -1,0 +1,13 @@
+body {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	max-width: 60rem;
+	padding: 2rem;
+}
+
+main, header {
+	display: inline-block;
+}
