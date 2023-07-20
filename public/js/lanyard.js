@@ -9,7 +9,7 @@ class Lanyard {
 	constructor(discord_ids) {
 		this.#discord_ids = Array.isArray(discord_ids) ? discord_ids : [discord_ids];
 		this.#listeners = {};
-		this.#connect()
+		this.#connect();
 	}
 
 	#connect() {

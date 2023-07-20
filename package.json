@@ -1,19 +1,19 @@
 {
-  "name": "dev",
-  "devDependencies": {
-    "bun-types": "latest",
-    "prettier": "^3.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "start": "bunx gateway",
-    "dev": "bunx gateway dev",
-    "gen": "bunx gateway gen",
-    "prettier": "prettier --write ."
-  },
-  "dependencies": {
-    "gateway": "redraskal/gateway#main"
-  }
+	"name": "dev",
+	"devDependencies": {
+		"bun-types": "latest",
+		"prettier": "^3.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"start": "bunx gateway",
+		"dev": "bunx gateway dev",
+		"gen": "bunx gateway gen",
+		"prettier": "prettier --write ."
+	},
+	"dependencies": {
+		"gateway": "redraskal/gateway#main"
+	}
 }

@@ -2,21 +2,21 @@
 	font-family: "Berkeley Mono";
 	font-display: swap;
 	font-style: normal;
-	src: url("/assets/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2");
+	src: url("/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Berkeley Mono";
 	font-display: swap;
 	font-style: italic;
-	src: url("/assets/fonts/BerkeleyMonoVariable-Italic.woff2") format("woff2");
+	src: url("/fonts/BerkeleyMonoVariable-Italic.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Sevastopol Interface";
 	font-display: swap;
 	font-style: normal;
-	src: url("/assets/fonts/Sevastopol-Interface.woff2") format("woff2");
+	src: url("/fonts/Sevastopol-Interface.woff2") format("woff2");
 }
 
 :root {
