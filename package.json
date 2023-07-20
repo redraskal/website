@@ -1,14 +1,19 @@
 {
   "name": "dev",
-  "module": "index.ts",
-  "type": "module",
   "devDependencies": {
-    "bun-types": "^0.5.0"
+    "bun-types": "latest",
+    "prettier": "^3.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "scripts": {
+    "start": "bunx gateway",
+    "dev": "bunx gateway dev",
+    "gen": "bunx gateway gen",
+    "prettier": "prettier --write ."
+  },
   "dependencies": {
-    "hono": "^3.1.8"
+    "gateway": "redraskal/gateway#main"
   }
 }
