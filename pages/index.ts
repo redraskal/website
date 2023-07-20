@@ -36,11 +36,11 @@ export default class implements Route {
 					<ul>
 						<li>
 							<a href="https://github.com/redraskal/r6-dissect" target="_blank">r6-dissect</a>
-							- match replay API & CLI for Rainbow Six: Siege's Dissect (.rec) format
+							<span> - match replay API & CLI for Rainbow Six: Siege's Dissect (.rec) format</span>
 						</li>
 						<li>
 							<a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>
-							- Experimental Bun web framework
+							<span> - experimental Bun web framework</span>
 						</li>
 						<li>Myth of Lohim - programming lead & devops, medieval fantasy dungeon crawler</li>
 					</ul>
