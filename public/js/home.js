@@ -4,8 +4,6 @@ const spotifyTop = document.getElementById("spotify-top");
 const spotifyList = document.getElementById("spotify-list");
 const spotifyLive = document.getElementById("spotify-live");
 
-spotifyRecent.setAttribute("disabled", true);
-
 function songElement(data) {
 	let song = document.createElement("a");
 	song.href = `https://open.spotify.com/track/${data.track_id}`;
@@ -32,15 +30,24 @@ async function list(type, n) {
 	}
 }
 
+if (window.location.hash == "#top") {
+	spotifyTop.setAttribute("disabled", true);
+	await list("top", 5);
+} else {
+	spotifyRecent.setAttribute("disabled", true);
+}
+
 spotifyRecent.addEventListener("click", async () => {
 	spotifyRecent.setAttribute("disabled", true);
 	spotifyTop.removeAttribute("disabled");
+	history.pushState("", document.title, window.location.pathname + window.location.search);
 	await list("recent", 5);
 });
 
 spotifyTop.addEventListener("click", async () => {
 	spotifyTop.setAttribute("disabled", true);
 	spotifyRecent.removeAttribute("disabled");
+	window.location.hash = "top";
 	await list("top", 5);
 });
 
