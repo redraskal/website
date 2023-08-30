@@ -1,3 +1,41 @@
+#spotify > div {
+	display: flex;
+}
+
+#spotify > div > button {
+	background: var(--accents-1);
+	color: var(--foreground);
+	border: var(--border-width) solid var(--green);
+	border-bottom: none;
+	padding: var(--padding);
+	font-family: var(--font-body);
+	cursor: pointer;
+}
+
+#spotify > div > button[disabled] {
+	color: var(--green);
+	cursor: not-allowed;
+}
+
+#spotify > div > button:nth-child(1) {
+	border-right: none;
+}
+
+#spotify ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+	border: var(--border-width) solid var(--green);
+}
+
+#spotify ul > li {
+	padding: var(--padding);
+}
+
+#spotify ul > li:nth-child(odd) {
+	background: var(--accents-1);
+}
+
 ul > li > pre {
 	display: inline;
 }

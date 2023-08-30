@@ -1,3 +1,8 @@
+:root {
+	--padding: 0.3rem;
+	--border-width: 2px;
+}
+
 body {
 	display: flex;
 	justify-content: center;
@@ -10,4 +15,24 @@ body {
 
 main, header {
 	display: inline-block;
+}
+
+.recording::before {
+	content: "• ";
+}
+
+.recording:not([disabled]) {
+	animation: recording 1s steps(1, end) infinite;
+}
+
+@keyframes recording {
+	0% {
+		color: var(--red);
+	}
+	50% {
+		color: var(--foreground);
+	}
+	100% {
+		color: var(--red);
+	}
 }

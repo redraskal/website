@@ -1,12 +1,15 @@
 :root {
 	--foreground: #FFFFFF;
 	--background: #000000;
+	--accents-1: #111;
 
 	--accent: #FFEE00;
 	--accent-light: #FFFCCC;
 
 	--green: #1DB954;
 	--green-light: #D2F1DD;
+
+	--red: #FF1A1A;
 }
 
 ::selection {

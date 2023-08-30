@@ -1,4 +1,12 @@
-import { Route, html } from "gateway";
+import { Route, html, RouteWebSocket } from "gateway";
+import { spotify } from "../src";
+import history, { SpotifyTrackRow } from "../src/history";
+
+function spotifyElement(track: SpotifyTrackRow) {
+	return html`<a href="https://open.spotify.com/track/${track.track_id}" target="_blank" class="green">
+		${track.song} by ${track.artist.split(";").join(", ")}
+	</a>`;
+}
 
 export default class implements Route {
 	head() {
@@ -21,15 +29,40 @@ export default class implements Route {
 		`;
 	}
 
+	ws(): RouteWebSocket {
+		return {
+			open(ws) {
+				ws.subscribe("spotify:live");
+			},
+		};
+	}
+
 	body() {
+		// prettier-ignore
 		return html`
 			<main>
 				<section>
 					<h1>Hey, I'm Benjamin Ryan</h1>
 					<p>Computer Science Student @ Maryville University</p>
 				</section>
-				<section>
-					<p>Listening to <span style="color: red" id="spotify">N/A</span></p>
+				<section id="spotify">
+					<p>
+						<span class="recording" ${!spotify ? "disabled" : ""}></span>
+						Listening to 
+						<span style="color: red" id="spotify-live">${spotify ? spotifyElement(spotify) : html`N/A`}
+						</span>
+					</p>
+					<div>
+						<button id="spotify-recent" disabled>Recent</button>
+						<button id="spotify-top">Top</button>
+					</div>
+					<ul id="spotify-list">
+						${history.last(5)?.map((row, i) => html`
+							<li>
+								${i+1}. ${spotifyElement(row)}
+							</li>
+						`) || ""}
+					</ul>
 				</section>
 				<section>
 					<h2>Current projects</h2>
@@ -83,10 +116,6 @@ export default class implements Route {
 					<samp>[1.169734] found BLUME MP-table mapped at [mem 0x10121989-0x000f9bff]</samp>
 					<samp>- - - - - - - - - - - - - - - - - - - - - - -</samp>
 					<samp>
-						Discord Presence WS (Lanyard) -
-						<a href="https://github.com/Phineas/lanyard" target="_blank">https://github.com/Phineas/lanyard</a>
-					</samp>
-					<samp>
 						Berkeley Mono Font -
 						<a href="https://berkeleygraphics.com/typefaces/berkeley-mono/" target="_blank"
 							>https://berkeleygraphics.com/typefaces/berkeley-mono</a
@@ -100,7 +129,7 @@ export default class implements Route {
 					</samp>
 				</footer>
 			</main>
-			<script src="/js/lanyard.js" type="text/javascript"></script>
+			<script src="/js/home.js" type="text/javascript"></script>
 		`;
 	}
 }
