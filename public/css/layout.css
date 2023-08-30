@@ -35,6 +35,8 @@ body::after {
 
 main, header {
 	display: inline-block;
+	min-width: 100%;
+	max-width: min-content;
 }
 
 .recording::before {
