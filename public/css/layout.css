@@ -1,7 +1,7 @@
 :root {
 	--padding: 0.3rem;
 	--border-width: 2px;
-	--font-size: clamp(1rem, 1.5rem, 3vw);
+	--font-size: clamp(0.7rem, 1.5rem, 2vw);
 
 	font-size: var(--font-size);
 }
