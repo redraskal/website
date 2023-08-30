@@ -32,6 +32,7 @@ async function list(type, n) {
 
 if (window.location.hash == "#top") {
 	spotifyTop.setAttribute("disabled", true);
+	spotifyRecent.removeAttribute("disabled");
 	(async () => {
 		await list("top", 5);
 	})();
