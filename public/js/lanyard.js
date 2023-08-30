@@ -1,4 +1,4 @@
-const DISCORD_ID = "117016705796014083"; // redraskal#0001
+const DISCORD_ID = "117016705796014083"; // redraskal
 
 class Lanyard {
 	#ws;

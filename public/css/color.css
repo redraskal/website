@@ -10,7 +10,7 @@
 }
 
 ::selection {
-	color: var(--foreground);
+	color: var(--background);
 	background: var(--accent);
 	text-decoration: none;
 }
