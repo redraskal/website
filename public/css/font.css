@@ -19,8 +19,32 @@
 	src: url("/fonts/Sevastopol-Interface.woff2") format("woff2");
 }
 
+@font-face {
+	font-family: "Redaction";
+	font-display: swap;
+	font-style: normal;
+	font-weight: normal;
+	src: url("/fonts/Redaction-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Redaction";
+	font-display: swap;
+	font-style: normal;
+	font-weight: bold;
+	src: url("/fonts/Redaction-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Redaction";
+	font-display: swap;
+	font-style: italic;
+	src: url("/fonts/Redaction-Italic.woff2") format("woff2");
+}
+
 :root {
 	--font-body: "Berkeley Mono";
+	--font-serif: "Redaction";
 	--font-terminal: "Sevastopol Interface";
 	font-family: var(--font-body), -apple-system, sans-serif;
 	font-optical-sizing: auto;

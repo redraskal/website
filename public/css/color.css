@@ -9,6 +9,8 @@
 	--green: #1DB954;
 	--green-light: #D2F1DD;
 
+	--blue: color(display-p3 0 0 1 / 1);
+
 	--red: #FF1A1A;
 }
 

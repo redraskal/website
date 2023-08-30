@@ -1,0 +1,11 @@
+h1, p {
+	font-family: var(--font-serif);
+}
+
+p {
+	text-indent: 4rem;
+}
+
+p:nth-child(2) {
+	text-indent: 0;
+}

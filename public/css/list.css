@@ -9,6 +9,7 @@
 	border-bottom: none;
 	padding: var(--padding);
 	font-family: var(--font-body);
+	font-size: calc(var(--font-size) / 2);
 	cursor: pointer;
 }
 

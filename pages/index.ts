@@ -53,8 +53,8 @@ export default class implements Route {
 						</span>
 					</p>
 					<div>
-						<button id="spotify-recent" disabled>Recent</button>
-						<button id="spotify-top">Top</button>
+						<button id="spotify-recent" disabled>+ Recent</button>
+						<button id="spotify-top">+ Top</button>
 					</div>
 					<ul id="spotify-list">
 						${history.last(5)?.map((row, i) => html`
@@ -112,21 +112,24 @@ export default class implements Route {
 					</ul>
 				</section>
 				<footer>
-					<samp>[0.000000] init_memory_mapping: [mem 0x00100000-0xdefa4fff]</samp>
-					<samp>[1.169734] found BLUME MP-table mapped at [mem 0x10121989-0x000f9bff]</samp>
-					<samp>- - - - - - - - - - - - - - - - - - - - - - -</samp>
-					<samp>
-						Berkeley Mono Font -
+					<p>
+						[0.000000] init_memory_mapping: [mem 0x00100000-0xdefa4fff]
+						<br>
+						[1.169734] found BLUME MP-table mapped at [mem 0x10121989-0x000f9bff]
+					</p>
+					<p>- - - - - - - - - - - - - - - - - - - - - - -</samp>
+					<p>
+						Berkeley Mono Font - 
 						<a href="https://berkeleygraphics.com/typefaces/berkeley-mono/" target="_blank"
 							>https://berkeleygraphics.com/typefaces/berkeley-mono</a
 						>
-					</samp>
-					<samp>
-						Sevastopol Interface Font -
+						<br>
+						Sevastopol Interface Font - 
 						<a href="https://www.dafont.com/sevastopol-interface.font" target="_blank"
 							>https://www.dafont.com/sevastopol-interface.font</a
 						>
-					</samp>
+					</p>
+					<p>Created with gateway on Bun</p>
 				</footer>
 			</main>
 			<script src="/js/home.js" type="text/javascript"></script>
