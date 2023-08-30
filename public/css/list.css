@@ -4,7 +4,7 @@
 
 #spotify > div > button {
 	background: var(--accents-1);
-	color: var(--foreground);
+	color: var(--green);
 	border: var(--border-width) solid var(--green);
 	border-bottom: none;
 	padding: var(--padding);
@@ -14,7 +14,7 @@
 }
 
 #spotify > div > button[disabled] {
-	color: var(--green);
+	color: var(--foreground);
 	cursor: not-allowed;
 }
 
