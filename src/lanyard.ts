@@ -2,11 +2,11 @@ export default class LanyardClient {
 	private ws?: WebSocket;
 	private heartbeat?: Timer;
 	private subscribeTo: string[];
-	private listeners: Record<string, any>;
+	private listeners: Record<string, any> = {};
+	private backoff: number = 1000;
 
 	constructor(subscribeTo: string | string[]) {
 		this.subscribeTo = Array.isArray(subscribeTo) ? subscribeTo : [subscribeTo];
-		this.listeners = {};
 		this.connect();
 	}
 
@@ -57,7 +57,8 @@ export default class LanyardClient {
 		});
 		this.ws.addEventListener("close", () => {
 			clearInterval(this.heartbeat);
-			setTimeout(() => this.connect, 3000);
+			this.backoff *= 2;
+			setTimeout(() => this.connect(), this.backoff);
 			console.log(`[lanyard] closed`);
 		});
 	}
