@@ -43,14 +43,14 @@ export default class implements Route {
 			<main>
 				<section>
 					<h1>Hey, I'm Benjamin Ryan</h1>
-					<p>Computer Science Student @ Maryville University</p>
+					<p>My capacity for wonder drives my unwavering ambition to evaluate software engineering challenges with curiosity and excellence. But it's dangerous to go alone. Investing in team members and actively seeking feedback alter the course of any project. Sometimes, the best ideas come from the quietest voices in the room. I leverage over a decade of personal experience and knowledge as a student at Maryville University to commonly solve problems in Go, TypeScript, C++, Java, and Kotlin.</p>
+					<p>I'd like to share my favorite music to get to know each other!</p>
 				</section>
 				<section id="spotify">
 					<p>
 						<span class="recording" ${!spotify ? "disabled" : ""}></span>
-						Listening to 
-						<span style="color: red" id="spotify-live">${spotify ? spotifyElement(spotify) : html`N/A`}
-						</span>
+						Currently listening to 
+						<span style="color: red" id="spotify-live">${spotify ? spotifyElement(spotify) : html`N/A`}</span>
 					</p>
 					<div>
 						<button id="spotify-recent" disabled>+ Recent</button>
@@ -63,9 +63,10 @@ export default class implements Route {
 							</li>
 						`) || ""}
 					</ul>
+					<p>I built this realtime Spotify status using TypeScript, <a href="https://bun.sh" target="_blank">Bun</a> (TypeScript/JavaScript runtime) and my minimal web framework called <a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>.</p>
 				</section>
 				<section>
-					<h2>Current projects</h2>
+					<h2>Active projects</h2>
 					<ul>
 						<li>
 							<a href="https://github.com/redraskal/r6-dissect" target="_blank">r6-dissect</a>
@@ -73,17 +74,9 @@ export default class implements Route {
 						</li>
 						<li>
 							<a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>
-							<span> - experimental Bun web framework</span>
+							<span> - minimal & performant web framework for Bun</span>
 						</li>
 						<li>Myth of Lohim - programming lead & devops, medieval fantasy dungeon crawler</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Past projects</h2>
-					<ul>
-						<li>
-							<a href="https://mccisland.net" target="_blank">MCC Island</a> - public MC Championship Minecraft server
-						</li>
 					</ul>
 				</section>
 				<section>
@@ -123,13 +116,8 @@ export default class implements Route {
 						<a href="https://berkeleygraphics.com/typefaces/berkeley-mono/" target="_blank"
 							>https://berkeleygraphics.com/typefaces/berkeley-mono</a
 						>
-						<br>
-						Sevastopol Interface Font - 
-						<a href="https://www.dafont.com/sevastopol-interface.font" target="_blank"
-							>https://www.dafont.com/sevastopol-interface.font</a
-						>
 					</p>
-					<p>Created with gateway on Bun</p>
+					<br />
 				</footer>
 			</main>
 			<script src="/js/home.js" type="text/javascript"></script>
