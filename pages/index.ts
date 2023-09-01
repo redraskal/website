@@ -44,7 +44,6 @@ export default class implements Route {
 				<section>
 					<h1>Hey, I'm Benjamin Ryan</h1>
 					<p>My capacity for wonder drives my unwavering ambition to evaluate software engineering challenges with curiosity and excellence. But it's dangerous to go alone. Investing in team members and actively seeking feedback alter the course of any project. Sometimes, the best ideas come from the quietest voices in the room. I leverage over a decade of personal experience and knowledge as a student at Maryville University to commonly solve problems in Go, TypeScript, C++, Java, and Kotlin.</p>
-					<p>I'd like to share my favorite music with you!</p>
 				</section>
 				<section id="spotify">
 					<p>
