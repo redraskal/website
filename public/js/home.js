@@ -30,7 +30,7 @@ async function list(type, n) {
 	}
 }
 
-if (window.location.hash == "#top") {
+if (window.location.search.startsWith("?top")) {
 	spotifyTop.setAttribute("disabled", true);
 	spotifyRecent.removeAttribute("disabled");
 	(async () => {
@@ -43,14 +43,14 @@ if (window.location.hash == "#top") {
 spotifyRecent.addEventListener("click", async () => {
 	spotifyRecent.setAttribute("disabled", true);
 	spotifyTop.removeAttribute("disabled");
-	history.pushState("", document.title, window.location.pathname + window.location.search);
+	history.pushState("", document.title, window.location.pathname);
 	await list("recent", 5);
 });
 
 spotifyTop.addEventListener("click", async () => {
 	spotifyTop.setAttribute("disabled", true);
 	spotifyRecent.removeAttribute("disabled");
-	window.location.hash = "top";
+	history.pushState("", document.title, window.location.pathname + "?top=1");
 	await list("top", 5);
 });
 
