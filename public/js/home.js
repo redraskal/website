@@ -3,12 +3,13 @@ const spotifyRecent = document.getElementById("spotify-recent");
 const spotifyTop = document.getElementById("spotify-top");
 const spotifyList = document.getElementById("spotify-list");
 const spotifyLive = document.getElementById("spotify-live");
+let spotifyProgressInterval;
 
-function songElement(data) {
+function songElement(json) {
 	let song = document.createElement("a");
-	song.href = `https://open.spotify.com/track/${data.track_id}`;
+	song.href = `https://open.spotify.com/track/${json.track_id}`;
 	song.target = "_blank";
-	song.innerHTML = `${data.song} by ${data.artist.split(";").join(", ")}`;
+	song.innerHTML = `${json.song} by ${json.artist.split(";").join(", ")}`;
 	song.className = "green";
 	return song;
 }
@@ -28,6 +29,25 @@ async function list(type, n) {
 		}
 		spotifyList.appendChild(li);
 	}
+}
+
+async function songProgressInterval(json) {
+	let response;
+	if (!json) {
+		response = await fetch("/spotify/live.json");
+		json = await response.json();
+	}
+	if (!json?.timestamps) return;
+	const total = json.timestamps.end - json.timestamps.start;
+	const spotifyLiveLink = document.querySelector("#spotify-live > a");
+	const timer = setInterval(() => {
+		const progress = ((Date.now() - json.timestamps.start) / total) * 100;
+		if (progress >= 100) {
+			clearInterval(timer);
+		}
+		spotifyLiveLink.style = `--progress: ${progress}%`;
+	}, 100);
+	return timer;
 }
 
 if (window.location.search.startsWith("?top")) {
@@ -55,9 +75,9 @@ spotifyTop.addEventListener("click", async () => {
 });
 
 ws.addEventListener("message", async (event) => {
-	const data = JSON.parse(event.data);
-	if (data.track_id) {
-		const song = songElement(data);
+	const json = JSON.parse(event.data);
+	if (json.track_id) {
+		const song = songElement(json);
 		spotifyLive.innerText = "";
 		spotifyLive.appendChild(song);
 		recording.removeAttribute("disabled");
@@ -66,9 +86,20 @@ ws.addEventListener("message", async (event) => {
 		} else {
 			await list("top", 5);
 		}
+		if (spotifyProgressInterval) {
+			clearInterval(spotifyProgressInterval);
+		}
+		spotifyProgressInterval = songProgressInterval(json);
 	} else {
 		spotifyLive.style.color = "red";
 		spotifyLive.innerText = "N/A";
 		recording.setAttribute("disabled", true);
+		if (spotifyProgressInterval) {
+			clearInterval(spotifyProgressInterval);
+		}
 	}
 });
+
+(async () => {
+	await songProgressInterval();
+})();

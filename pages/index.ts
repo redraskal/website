@@ -2,8 +2,13 @@ import { Route, html, RouteWebSocket } from "gateway";
 import { spotify } from "../src";
 import history, { SpotifyTrackRow } from "../src/history";
 
-function spotifyElement(track: SpotifyTrackRow) {
-	return html`<a href="https://open.spotify.com/track/${track.track_id}" target="_blank" class="green">
+function spotifyElement(track: SpotifyTrackRow, progress?: number) {
+	return html`<a
+		href="https://open.spotify.com/track/${track.track_id}"
+		target="_blank"
+		class="green"
+		${progress ? `style="--progress: ${progress}%;"` : ""}
+	>
 		${track.song} by ${track.artist.split(";").join(", ")}
 	</a>`;
 }
@@ -49,7 +54,14 @@ export default class implements Route {
 					<p>
 						<span class="recording" ${!spotify ? "disabled" : ""}></span>
 						Currently listening to 
-						<span style="color: red" id="spotify-live">${spotify ? spotifyElement(spotify) : html`N/A`}</span>
+						<span style="color: red" id="spotify-live">${spotify ? 
+							spotifyElement(spotify, (
+									(Date.now() - spotify.timestamps.start)
+									/
+									(spotify.timestamps.end - spotify.timestamps.start)
+								) * 100
+							) 
+							: html`N/A`}</span>
 					</p>
 					<div>
 						<button id="spotify-recent" disabled>+ Recent</button>

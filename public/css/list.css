@@ -13,6 +13,10 @@
 	cursor: pointer;
 }
 
+#spotify > div > button:hover:not([disabled]) {
+	color: var(--green-light);
+}
+
 #spotify > div > button[disabled] {
 	color: var(--foreground);
 	cursor: not-allowed;
@@ -20,6 +24,32 @@
 
 #spotify > div > button:nth-child(1) {
 	border-right: none;
+}
+
+#spotify-live > a {
+	position: relative;
+	--progress: 0%;
+}
+
+#spotify-live > a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px;
+	bottom: 1px;
+	background-image: linear-gradient(to right, var(--green) 50%, var(--green-light) 50%);
+	background-size: 200% 100%;
+	background-position: 100%;
+	background-repeat: no-repeat;
+}
+
+#spotify-live > a:hover {
+	--progress: 0% !important;
+}
+
+#spotify-live > a::after {
+	background-position: calc(100% - var(--progress));
 }
 
 #spotify ul {
