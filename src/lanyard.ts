@@ -11,6 +11,7 @@ export default class LanyardClient {
 	}
 
 	private connect() {
+		console.log("[lanyard] connecting");
 		this.ws = new WebSocket("wss://api.lanyard.rest/socket");
 		this.ws.addEventListener("message", (event) => {
 			if (event.data instanceof Buffer) return;
@@ -58,7 +59,9 @@ export default class LanyardClient {
 		this.ws.addEventListener("close", () => {
 			clearInterval(this.heartbeat);
 			this.backoff *= 2;
-			setTimeout(() => this.connect(), this.backoff);
+			setTimeout(() => {
+				this.connect();
+			}, this.backoff);
 			console.log(`[lanyard] closed`);
 		});
 	}

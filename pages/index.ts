@@ -62,7 +62,7 @@ export default class implements Route {
 							</li>
 						`) || ""}
 					</ul>
-					<p>I built this realtime Spotify status using TypeScript, <a href="https://bun.sh" target="_blank">Bun</a> (TypeScript/JavaScript runtime) and my minimal web framework called <a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>.</p>
+					<p>I built this realtime Spotify status using TypeScript, <a href="https://bun.sh" target="_blank">Bun</a> (JavaScript runtime) and my minimal web framework called <a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>.</p>
 				</section>
 				<section>
 					<h2>Active projects</h2>
