@@ -3,12 +3,11 @@ import { spotify } from "../src";
 import history, { SpotifyTrackRow } from "../src/history";
 
 function spotifyElement(track: SpotifyTrackRow, progress?: number) {
-	return html`<a
-		href="https://open.spotify.com/track/${track.track_id}"
-		target="_blank"
+	// prettier-ignore
+	return html`<a href="https://open.spotify.com/track/${track.track_id}" 
+		target="_blank" 
 		class="green"
-		${progress ? `style="--progress: ${progress}%;"` : ""}
-	>
+		${progress ? ` style="--progress: ${progress}%;"` : ""}>
 		${track.song} by ${track.artist.split(";").join(", ")}
 	</a>`;
 }
