@@ -87,10 +87,31 @@ export default class implements Route {
 							<span> - minimal & performant web framework for Bun</span>
 						</li>
 						<li>
+							<a href="https://github.com/redraskal/obs-replay-folders" target="_blank">obs-replay-folders</a>
+							<span> - OBS script to automatically categorize replays with game-specific folders</span>
+						</li>
+						<li>
 							<a href="https://everus.sh" target="_blank">everus</a>
 							<span> - distributed Minecraft networking (soon™)</span>
 						</li>
 						<li>Myth of Lohim - programming lead & devops, medieval fantasy dungeon crawler</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Past projects</h2>
+					<ul>
+						<li>
+							<a href="https://github.com/redraskal/bun-migrate" target="_blank">bun-migrate</a>
+							<span> - simple SQLite file-based migration system for Bun</span>
+						</li>
+						<li>
+							<a href="https://github.com/redraskal/bun-kv" target="_blank">bun-kv</a>
+							<span> - simple KV store using Bun's SQLite module</span>
+						</li>
+						<li>
+							<a href="https://github.com/redraskal/css" target="_blank">css</a>
+							<span> - tiny CSS-only framework based on Vercel</span>
+						</li>
 					</ul>
 				</section>
 				<section>

@@ -19,6 +19,7 @@ body {
 	float: none;
 	max-width: 60rem;
 	padding: 2rem;
+	overflow-wrap: break-word;
 }
 
 body::after {
