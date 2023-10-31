@@ -1,0 +1,11 @@
+kbd::before {
+	content: "[";
+}
+
+kbd {
+	padding: calc(var(--padding) / 4);
+}
+
+kbd::after {
+	content: "]";
+}

@@ -13,40 +13,97 @@
 }
 
 @font-face {
-	font-family: "Sevastopol Interface";
+	font-family: "Source Serif";
 	font-display: swap;
 	font-style: normal;
-	src: url("/fonts/Sevastopol-Interface.woff2") format("woff2");
+	src: url("/fonts/SourceSerif4Variable-Roman.otf.woff2") format("woff2");
 }
 
 @font-face {
-	font-family: "Redaction";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-	src: url("/fonts/Redaction-Regular.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "Redaction";
-	font-display: swap;
-	font-style: normal;
-	font-weight: bold;
-	src: url("/fonts/Redaction-Bold.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: "Redaction";
+	font-family: "Source Serif";
 	font-display: swap;
 	font-style: italic;
-	src: url("/fonts/Redaction-Italic.woff2") format("woff2");
+	src: url("/fonts/SourceSerif4Variable-Italic.otf.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 100;
+	src: url("/fonts/Geist-Thin.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 200;
+	src: url("/fonts/Geist-UltraLight.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 300;
+	src: url("/fonts/Geist-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Geist-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/Geist-Medium.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 600;
+	src: url("/fonts/Geist-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/Geist-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 800;
+	src: url("/fonts/Geist-Black.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Geist";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 900;
+	src: url("/fonts/Geist-UltraBlack.woff2") format("woff2");
 }
 
 :root {
-	--font-body: "Berkeley Mono";
-	--font-serif: "Redaction";
-	--font-terminal: "Sevastopol Interface";
-	font-family: var(--font-body), -apple-system, sans-serif;
+	--font-sans-serif: "Geist", -apple-system, sans-serif;
+	--font-serif: "Source Serif", ui-serif, Garamond, serif;
+	--font-berkeley: "Berkeley Mono", ui-monospace, "Courier New", Courier, monospace;
+
+	font-family: var(--font-sans-serif);
 	font-optical-sizing: auto;
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
@@ -59,13 +116,23 @@
 	background: var(--background);
 }
 
+h1,
+h2,
+h3 {
+	font-family: var(--font-sans-serif);
+}
+
+footer {
+	font-family: var(--font-berkeley);
+}
+
 samp {
 	display: block;
 	line-height: 0.7;
-	font-family: var(--font-terminal);
+	font-family: var(--font-berkeley);
 	font-size: x-large;
 }
 
 pre {
-	font-family: var(--font-body);
+	font-family: var(--font-sans-serif);
 }

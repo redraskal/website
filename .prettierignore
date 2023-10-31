@@ -2,12 +2,11 @@
 
 # ignore
 migrations/
-public/
+public/fonts
+public/img
 bun.lockb
 Dockerfile
 .vscode/
-
-# lavalier
 *.sqlite
 
 # Logs

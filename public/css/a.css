@@ -1,9 +1,9 @@
 a {
-	color: var(--accent);
+	color: var(--primary);
 }
 
 a:hover {
-	color: var(--accent-light);
+	color: var(--primary-lighter);
 }
 
 a.green {
@@ -11,5 +11,5 @@ a.green {
 }
 
 a.green:hover {
-	color: var(--green-light);
+	color: var(--red);
 }

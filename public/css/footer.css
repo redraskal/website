@@ -1,0 +1,16 @@
+footer {
+	background: var(--grain), linear-gradient(var(--primary), var(--primary-light));
+	background-size: 250px, 100%, cover;
+	background-blend-mode: overlay;
+	color: var(--background);
+	padding: 1rem;
+}
+
+footer > a {
+	color: var(--background);
+}
+
+footer > a:hover {
+	background: var(--background);
+	color: var(--foreground);
+}

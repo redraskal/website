@@ -22,7 +22,7 @@ async function list(type, n) {
 		const row = json[i];
 		const li = document.createElement("li");
 		const song = songElement(row);
-		li.innerText = `${i+1}. `;
+		li.innerText = `${i + 1}. `;
 		li.appendChild(song);
 		if (row.plays) {
 			li.innerHTML += ` - ${row.plays} plays`;

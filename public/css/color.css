@@ -1,21 +1,33 @@
 :root {
-	--foreground: #FFFFFF;
-	--background: #000000;
+	--background: black;
 	--accents-1: #111;
+	--accents-2: #333;
+	--accents-3: #444;
+	--accents-4: #666;
+	--accents-5: #888;
+	--accents-6: #999;
+	--accents-7: #eaeaea;
+	--accents-8: #fafafa;
+	--foreground: white;
 
-	--accent: #FFEE00;
-	--accent-light: #FFFCCC;
+	--primary-lighter: #f7d4d6;
+	--primary-light: #ff1a1a;
+	--primary: #ff5100;
+	--primary-dark: red;
 
-	--green: #1DB954;
-	--green-light: #D2F1DD;
+	--link: #ffee00;
+	--link-hover: #fffccc;
 
+	--red: #ff1a1a;
 	--blue: color(display-p3 0 0 1 / 1);
-
-	--red: #FF1A1A;
+	--blue-light: color(display-p3 0 0.412 1 / 1);
+	--yellow: color(display-p3 1 1 0 / 1);
+	--green: color(display-p3 0 1 0 / 1);
+	--green-light: #d2f1dd;
 }
 
 ::selection {
 	color: var(--background);
-	background: var(--accent);
+	background: var(--primary);
 	text-decoration: none;
 }

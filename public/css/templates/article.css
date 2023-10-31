@@ -1,11 +1,17 @@
-h1, p {
+p {
 	font-family: var(--font-serif);
 }
 
-p {
-	text-indent: 4rem;
+section:first-of-type > h1 {
+	margin-bottom: 0;
 }
 
-p:nth-child(2) {
-	text-indent: 0;
+section:first-of-type > p:first-of-type {
+	margin-bottom: 0;
+}
+
+section:first-of-type > p:last-child {
+	font-family: var(--font-berkeley);
+	color: var(--primary);
+	margin: 0;
 }

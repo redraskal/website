@@ -1,3 +1,7 @@
+#spotify {
+	font-family: var(--font-berkeley);
+}
+
 #spotify > div {
 	display: flex;
 }
@@ -10,6 +14,7 @@
 	padding: var(--padding);
 	font-family: var(--font-body);
 	font-size: clamp(80%, var(--font-size) / 2, var(--font-size));
+	text-transform: none;
 	cursor: pointer;
 }
 
@@ -19,7 +24,7 @@
 
 #spotify > div > button[disabled] {
 	color: var(--foreground);
-	cursor: not-allowed;
+	cursor: default;
 }
 
 #spotify > div > button:nth-child(1) {
@@ -38,14 +43,14 @@
 	right: 0;
 	height: 2px;
 	bottom: 1px;
-	background-image: linear-gradient(to right, var(--green) 50%, var(--green-light) 50%);
+	background-image: linear-gradient(to right, var(--red) 50%, var(--green) 50%);
 	background-size: 200% 100%;
 	background-position: 100%;
 	background-repeat: no-repeat;
 }
 
 #spotify-live > a:hover {
-	--progress: 0% !important;
+	--progress: 100% !important;
 }
 
 #spotify-live > a::after {
@@ -61,6 +66,15 @@
 
 #spotify ul > li {
 	padding: var(--padding);
+}
+
+#spotify ul > li > a {
+	max-width: 65%;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 #spotify ul > li:nth-child(odd) {

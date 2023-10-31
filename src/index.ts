@@ -1,5 +1,6 @@
 import history from "./history";
 import LanyardClient from "./lanyard";
+import "./articles";
 
 const lanyard = new LanyardClient("117016705796014083"); // redraskal
 export let spotify: any = null;

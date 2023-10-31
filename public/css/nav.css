@@ -1,0 +1,87 @@
+nav {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+nav a,
+nav a button {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	text-decoration: none;
+}
+
+nav a:first-child button {
+	border-left: 0;
+}
+
+nav a:not(:first-child) button {
+	border-left: 0;
+}
+
+nav a:last-child button {
+	border-right: 0;
+}
+
+nav a button {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+nav a[aria-current="page"] button,
+nav a:hover button {
+	background: var(--grain), var(--primary);
+	background-size: 250px, 100%, cover;
+	background-blend-mode: overlay;
+	border-right: var(--border-width) solid black;
+}
+
+nav a[aria-current="page"] button:not(:hover) {
+	color: var(--background);
+}
+
+nav a:not([aria-current="page"]) button:not(:hover) {
+	background: transparent;
+	backdrop-filter: blur(30px);
+}
+
+#horizon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 20rem;
+	mask-image: radial-gradient(circle, black, black 50%, transparent 100%);
+	overflow: hidden;
+	pointer-events: none;
+	user-select: none;
+	z-index: -1;
+}
+
+#horizon:before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	opacity: 0.8;
+}
+
+#horizon:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -50%;
+	bottom: 0;
+	width: 200%;
+	aspect-ratio: 1 / 0.4;
+	background: var(--background);
+	border-radius: 50%;
+	box-shadow:
+		inset 5px 5px 15px var(--foreground),
+		0 0 20px 15px red,
+		0 0 40px 20px var(--green),
+		0 0 120px 20px var(--blue-light);
+	filter: blur(1px);
+}
