@@ -31,3 +31,7 @@
 	background: var(--primary);
 	text-decoration: none;
 }
+
+html {
+	background: var(--background);
+}

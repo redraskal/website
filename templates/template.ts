@@ -1,5 +1,4 @@
 import { html, HTMLTemplateString } from "gateway";
-import { currentCommit } from "../src/git";
 
 type NavLink = {
 	href: string;
@@ -42,8 +41,6 @@ export default function (path: string, body: HTMLTemplateString) {
 				<a href="mailto:ben@ryben.dev" target="_blank">ben@ryben.dev</a>
 				<br />
 				<a href="https://github.com/redraskal.keys" target="_blank">redraskal.keys</a>
-				<br />
-				version: main/${currentCommit}
 			</footer>
 			<hr />
 		</main>
