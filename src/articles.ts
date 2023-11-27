@@ -31,7 +31,7 @@ type TOMLMetadata = {
 let articles: Article[] = [];
 let listedArticles: Article[] = [];
 const articleIndex: Record<string, Article> = {};
-const files = await readdir("./blog", { withFileTypes: true });
+const files = await readdir("./posts", { withFileTypes: true });
 
 async function read(file: BunFile) {
 	let text = await file.text();
