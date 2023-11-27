@@ -38,8 +38,10 @@ export default class implements Route {
 		// prettier-ignore
 		return template("/", html`
 			<section>
-				<h1>Hey, I'm Benjamin Ryan</h1>
-				<p>My capacity for wonder drives my unwavering ambition to evaluate software engineering challenges with curiosity and excellence. I leverage over a decade of personal experience and knowledge as a student at Maryville University to commonly solve problems in Go, TypeScript, C++, C, Java, and Kotlin.</p>
+				<h1>Benjamin Ryan</h1>
+				<p>
+					Hey, I'm a senior CS student at Maryville University! I love programming, design, reading/writing stories, and listening to/creating music. I publish my side projects on GitHub! Feel free to <a href="/contact">connect</a> with me.
+				</p>
 			</section>
 			<section id="spotify">
 				<p>
@@ -78,12 +80,12 @@ export default class implements Route {
 						<span> - minimal & performant web framework for Bun</span>
 					</li>
 					<li>
-						<a href="https://github.com/redraskal/obs-replay-folders" target="_blank">obs-replay-folders</a>
-						<span> - OBS script to automatically categorize replays with game-specific folders</span>
+						<a href="https://github.com/redraskal/clips" target="_blank">clips</a>
+						<span> - self-hosted video game clips website harnessing the speed of Bun</span>
 					</li>
 					<li>
-						<a href="https://everus.sh" target="_blank">everus</a>
-						<span> - distributed Minecraft networking (soon™)</span>
+						<a href="https://github.com/redraskal/obs-replay-folders" target="_blank">obs-replay-folders</a>
+						<span> - OBS script to automatically categorize replays with game-specific folders</span>
 					</li>
 					<li>Myth of Lohim - programming lead & devops, medieval fantasy dungeon crawler</li>
 				</ul>

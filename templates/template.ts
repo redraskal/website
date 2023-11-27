@@ -20,8 +20,8 @@ const pages = [
 		label: "Home",
 	},
 	{
-		href: "/blog",
-		label: "Blog",
+		href: "/posts",
+		label: "Posts",
 	},
 	{
 		href: "/contact",
@@ -38,7 +38,9 @@ export default function (path: string, body: HTMLTemplateString) {
 			<hr />
 			${body}
 			<footer>
-				<a href="mailto:ben@ryben.dev" target="_blank">ben@ryben.dev</a>
+				<a href="mailto:ben@ctos.sh" target="_blank">ben@ctos.sh</a>
+				<br />
+				<a href="https://discord.com/users/117016705796014083">discord.com/@redraskal</a>
 				<br />
 				<a href="https://github.com/redraskal.keys" target="_blank">redraskal.keys</a>
 			</footer>

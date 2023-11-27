@@ -7,8 +7,8 @@ export default class implements Route {
 	head() {
 		return html`
 			${meta({
-				title: "Blog",
-				url: "https://redraskal.sh/blog",
+				title: "Posts",
+				url: "https://redraskal.sh/posts",
 			})}
 			<link rel="stylesheet" href="/css/style.css" />
 		`;
@@ -16,7 +16,7 @@ export default class implements Route {
 
 	body() {
 		return template(
-			"/blog",
+			"/posts",
 			html`
 				<section>
 					<h1>Posts</h1>

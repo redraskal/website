@@ -22,22 +22,22 @@ export default class implements Route {
 					<p>
 						Email:
 						<span> </span>
-						<a href="mailto:ben@ryben.dev" target="_blank">ben@ryben.dev</a>
+						<a href="mailto:ben@ctos.sh" target="_blank">ben@ctos.sh</a>
 					</p>
 					<p>
 						Discord:
 						<span> </span>
-						<a href="https://discord.com/users/117016705796014083" target="_blank">redraskal</a>
+						<a href="https://discord.com/users/117016705796014083" target="_blank">@redraskal</a>
 					</p>
 					<p>
 						GitHub:
 						<span> </span>
-						<a href="https://github.com/redraskal" target="_blank">redraskal</a>
+						<a href="https://github.com/redraskal" target="_blank">@redraskal</a>
 					</p>
 					<p>
 						X:
 						<span> </span>
-						<a href="https://twitter.com/ItsRedraskal" target="_blank">@ItsRedraskal</a>
+						<a href="https://twitter.com/redraskal_" target="_blank">@redraskal_</a>
 					</p>
 				</section>
 			`
