@@ -69,12 +69,8 @@
 }
 
 #spotify ul > li > a {
-	max-width: 65%;
-	display: inline-block;
+	display: inline;
 	vertical-align: top;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 
 #spotify ul > li:nth-child(odd) {
