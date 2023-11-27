@@ -14,7 +14,7 @@
 		"prettier": "prettier --write ."
 	},
 	"dependencies": {
-		"bun-migrate": "redraskal/bun-migrate#main",
+		"bun-migrate": "redraskal/bun-migrate#1129c6f",
 		"gateway": "redraskal/gateway#7c20f39",
 		"marked": "^9.1.3"
 	}
