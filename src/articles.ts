@@ -81,7 +81,7 @@ console.log("📰 Parsing articles...");
 
 for (let file of files) {
 	if (!file.name.endsWith(".md")) continue;
-	const article = await read(Bun.file(join("./blog", file.name)));
+	const article = await read(Bun.file(join("./posts", file.name)));
 	articleIndex[article.slug] = article;
 	articles.push(article);
 }
