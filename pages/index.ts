@@ -40,7 +40,7 @@ export default class implements Route {
 			<section>
 				<h1>Benjamin Ryan</h1>
 				<p>
-					Hey, I'm a senior CS student at Maryville University! I love programming, design, reading/writing stories, and listening to/creating music. I publish my side projects on GitHub! Feel free to <a href="/contact">connect</a> with me.
+					Hey, I'm a CS student at Maryville University! I love programming, design, as well as listening to & producing music. I publish my side projects on GitHub! Feel free to <a href="/contact">connect</a> with me.
 				</p>
 			</section>
 			<section id="spotify">

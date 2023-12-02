@@ -31,7 +31,7 @@ export default class implements Route {
 	body(data: Data<this>) {
 		if (!data.article) return Response.redirect("/404");
 		return template(
-			`/blog`,
+			`/posts`,
 			html`
 				<section>
 					<h1>${data.article.title}</h1>
@@ -50,7 +50,7 @@ export default class implements Route {
 				</section>
 				<section>${data.article.content}</section>
 				<section>
-					<a href="/blog"><- More posts</a>
+					<a href="/posts"><- More posts</a>
 				</section>
 			`
 		);
