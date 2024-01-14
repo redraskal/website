@@ -36,6 +36,7 @@ nav a:hover button {
 	background: var(--grain), var(--primary);
 	background-size: 250px, 100%, cover;
 	background-blend-mode: overlay;
+	background-repeat: none;
 	border-right: var(--border-width) solid black;
 }
 

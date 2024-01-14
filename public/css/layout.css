@@ -13,6 +13,7 @@ h1 {
 	background: var(--grain), var(--primary);
 	background-size: 250px, 100%, cover;
 	background-blend-mode: overlay;
+	background-repeat: none;
 	color: var(--background);
 	box-shadow:
 		0 calc(var(--border-width) * 2.5) 0 0 var(--background),
