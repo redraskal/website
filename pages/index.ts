@@ -1,17 +1,8 @@
-import { Route, html, RouteWebSocket } from "gateway";
+import { Route, html, RouteWebSocket, cache } from "gateway";
 import { spotify } from "../src";
 import history, { SpotifyTrackRow } from "../src/history";
 import { meta } from "../templates/meta";
 import template from "../templates/template";
-
-const head = html`
-	${meta({
-		title: "Benjamin Ryan",
-		description: "Computer Science Student @ Maryville University",
-		url: "https://redraskal.sh",
-	})}
-	<link rel="stylesheet" href="/css/style.css" />
-`;
 
 function spotifyTrack(track: SpotifyTrackRow, progress?: number) {
 	return html`<a
@@ -24,9 +15,17 @@ function spotifyTrack(track: SpotifyTrackRow, progress?: number) {
 	</a>`;
 }
 
+@cache("head")
 export default class implements Route {
 	head() {
-		return head;
+		return html`
+			${meta({
+				title: "Benjamin Ryan",
+				description: "Computer Science Student @ Maryville University",
+				url: "https://redraskal.sh",
+			})}
+			<link rel="stylesheet" href="/css/style.css" />
+		`;
 	}
 
 	ws(): RouteWebSocket {
@@ -58,7 +57,7 @@ export default class implements Route {
 										spotify,
 										((Date.now() - spotify.timestamps.start) / (spotify.timestamps.end - spotify.timestamps.start)) *
 											100
-								  )
+									)
 								: html`N/A`}</span
 						>
 					</p>
