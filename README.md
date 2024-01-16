@@ -2,6 +2,8 @@
 
 This is the source code to my [personal website](https://redraskal.sh). I use my own web framework for Bun, [gateway](https://github.com/redraskal/gateway).
 
+I use [lanyard](https://github.com/Phineas/lanyard) to fetch my live Discord activities.
+
 ## To install dependencies:
 
 ```bash

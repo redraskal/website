@@ -13,7 +13,7 @@ const head = html`
 	<link rel="stylesheet" href="/css/style.css" />
 `;
 
-function spotifyElement(track: SpotifyTrackRow, progress?: number) {
+function spotifyTrack(track: SpotifyTrackRow, progress?: number) {
 	return html`<a
 		href="https://open.spotify.com/track/${track.track_id}"
 		target="_blank"
@@ -54,7 +54,7 @@ export default class implements Route {
 						Currently listening to
 						<span style="color: red" id="spotify-live"
 							>${spotify
-								? spotifyElement(
+								? spotifyTrack(
 										spotify,
 										((Date.now() - spotify.timestamps.start) / (spotify.timestamps.end - spotify.timestamps.start)) *
 											100
@@ -67,7 +67,7 @@ export default class implements Route {
 						<button id="spotify-top">+ Top</button>
 					</div>
 					<ul id="spotify-list">
-						${history.last(5)?.map((row, i) => html` <li>${i + 1}. ${spotifyElement(row)}</li> `) || ""}
+						${history.last(5)?.map((row, i) => html`<li>${i + 1}. ${spotifyTrack(row)}</li>`) || ""}
 					</ul>
 				</section>
 				<section>
