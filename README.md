@@ -1,4 +1,6 @@
-# Gateway template
+# redraskal.sh / ctos.sh
+
+This is the source code to my [personal website](https://redraskal.sh). I use my own web framework for Bun, [gateway](https://github.com/redraskal/gateway).
 
 ## To install dependencies:
 
@@ -22,7 +24,7 @@ The new route will automatically open in Visual Studio Code.
 ## To run a development server:
 
 ```bash
-bun run dev
+bun dev
 ```
 
 ## To run a production server:

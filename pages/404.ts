@@ -23,7 +23,7 @@ const body = html`
 			<a href="https://unsplash.com/photos/8Hjx3GNZYeA" target="_blank">Unsplash</a>
 		</footer>
 	</main>
-`
+`;
 
 export default class implements Route {
 	head() {

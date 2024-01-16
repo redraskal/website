@@ -1,5 +1,6 @@
 {
-	"name": "dev",
+	"name": "redraskal.sh",
+	"private": true,
 	"devDependencies": {
 		"bun-types": "latest",
 		"prettier": "^3.0.0"
@@ -15,7 +16,7 @@
 	},
 	"dependencies": {
 		"bun-migrate": "redraskal/bun-migrate#1129c6f",
-		"gateway": "redraskal/gateway#7c20f39",
+		"gateway": "redraskal/gateway#de76d6d",
 		"marked": "^9.1.3"
 	}
 }
