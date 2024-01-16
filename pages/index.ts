@@ -4,6 +4,15 @@ import history, { SpotifyTrackRow } from "../src/history";
 import { meta } from "../templates/meta";
 import template from "../templates/template";
 
+const head = html`
+	${meta({
+		title: "Benjamin Ryan",
+		description: "Computer Science Student @ Maryville University",
+		url: "https://redraskal.sh",
+	})}
+	<link rel="stylesheet" href="/css/style.css" />
+`;
+
 function spotifyElement(track: SpotifyTrackRow, progress?: number) {
 	// prettier-ignore
 	return html`<a href="https://open.spotify.com/track/${track.track_id}" 
@@ -16,14 +25,7 @@ function spotifyElement(track: SpotifyTrackRow, progress?: number) {
 
 export default class implements Route {
 	head() {
-		return html`
-			${meta({
-				title: "Benjamin Ryan",
-				description: "Computer Science Student @ Maryville University",
-				url: "https://redraskal.sh",
-			})}
-			<link rel="stylesheet" href="/css/style.css" />
-		`;
+		return head;
 	}
 
 	ws(): RouteWebSocket {
@@ -35,7 +37,6 @@ export default class implements Route {
 	}
 
 	body() {
-		// prettier-ignore
 		return template("/", html`
 			<section>
 				<h1>Benjamin Ryan</h1>

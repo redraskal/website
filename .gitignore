@@ -1,5 +1,9 @@
 # Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
 
+# this is a paid font available at https://berkeleygraphics.com/typefaces/berkeley-mono
+public/fonts/BerkeleyMonoVariable-Italic.woff2
+public/fonts/BerkeleyMonoVariable-Regular.woff2
+
 *.sqlite
 
 # Logs
