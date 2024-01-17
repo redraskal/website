@@ -43,7 +43,7 @@ export default class implements Route {
 				<section>
 					<h1>Benjamin Ryan</h1>
 					<p>
-						Hey, I'm a CS student at Maryville University! I love programming, design, as well as listening to &
+						Hey, I'm a senior CS student at Maryville University! I love programming, design, as well as listening to &
 						producing music. I publish my side projects on GitHub! Feel free to <a href="/contact">connect</a> with me.
 					</p>
 				</section>
@@ -76,6 +76,11 @@ export default class implements Route {
 							<a href="https://github.com/redraskal/r6-dissect" target="_blank">r6-dissect</a>
 							<span> - match replay API & CLI for Rainbow Six: Siege's Dissect (.rec) format</span>
 						</li>
+						<li>Myth of Lohim - software engineering lead & devops, medieval fantasy dungeon crawler</li>
+						<li>
+							<a href="https://everus.sh" target="_blank">everus (WIP)</a>
+							<span> - scalable Minecraft infrastructure written in C</span>
+						</li>
 						<li>
 							<a href="https://github.com/redraskal/gateway" target="_blank">gateway</a>
 							<span> - minimal & performant web framework for Bun</span>
@@ -88,7 +93,6 @@ export default class implements Route {
 							<a href="https://github.com/redraskal/obs-replay-folders" target="_blank">obs-replay-folders</a>
 							<span> - OBS script to automatically categorize replays with game-specific folders</span>
 						</li>
-						<li>Myth of Lohim - programming lead & devops, medieval fantasy dungeon crawler</li>
 					</ul>
 				</section>
 				<section>

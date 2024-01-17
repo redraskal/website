@@ -42,7 +42,7 @@ export default function (path: string, body: HTMLTemplateString) {
 				<br />
 				<a href="https://discord.com/users/117016705796014083">discord.com/@redraskal</a>
 				<br />
-				<a href="https://github.com/redraskal.keys" target="_blank">redraskal.keys</a>
+				<a href="https://github.com/redraskal">github.com/redraskal</a>
 			</footer>
 			<hr />
 		</main>
