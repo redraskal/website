@@ -1,14 +1,12 @@
-import { Route, html, cache } from "gateway";
-import { meta } from "../templates/meta";
+import { Route, html, cache, meta } from "gateway";
 
 @cache()
 export default class implements Route {
 	head() {
 		return html`
 			${meta({
-				title: "404",
+				title: "404 • redraskal",
 				description: "Page not found.",
-				url: "https://redraskal.sh/404",
 			})}
 			<link rel="stylesheet" href="/css/style.css" />
 			<link rel="stylesheet" href="/css/pages/404.css" />

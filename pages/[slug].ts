@@ -1,7 +1,6 @@
 import { MatchedRoute } from "bun";
-import { Data, Route, html } from "gateway";
+import { Data, Route, html, meta } from "gateway";
 import { articleIndex } from "../src/articles";
-import { meta } from "../templates/meta";
 import template from "../templates/template";
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
@@ -19,9 +18,8 @@ export default class implements Route {
 	head(data: Data<this>) {
 		return html`
 			${meta({
-				title: data.article.title,
+				title: data.article.title + " • redraskal",
 				description: data.article.description,
-				url: `https://redraskal.sh/${data.article.slug}`,
 			})}
 			<link rel="stylesheet" href="/css/style.css" />
 			<link rel="stylesheet" href="/css/templates/article.css" />

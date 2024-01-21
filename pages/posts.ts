@@ -1,6 +1,5 @@
-import { Route, html, cache } from "gateway";
+import { Route, html, cache, meta } from "gateway";
 import { listedArticles } from "../src/articles";
-import { meta } from "../templates/meta";
 import template from "../templates/template";
 
 @cache()
@@ -8,8 +7,7 @@ export default class implements Route {
 	head() {
 		return html`
 			${meta({
-				title: "Posts",
-				url: "https://redraskal.sh/posts",
+				title: "Posts • redraskal",
 			})}
 			<link rel="stylesheet" href="/css/style.css" />
 		`;

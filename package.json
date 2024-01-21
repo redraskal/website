@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"bun-migrate": "redraskal/bun-migrate#1129c6f",
-		"gateway": "redraskal/gateway#5073fbb",
+		"gateway": "redraskal/gateway#b60366e",
 		"marked": "^9.1.3"
 	}
 }

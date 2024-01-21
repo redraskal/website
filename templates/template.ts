@@ -1,4 +1,4 @@
-import { html, HTMLTemplateString } from "gateway";
+import { html } from "gateway";
 
 type NavLink = {
 	href: string;
@@ -29,7 +29,7 @@ const pages = [
 	},
 ] as NavLink[];
 
-export default function (path: string, body: HTMLTemplateString) {
+export default function (path: string, body: string) {
 	return html`
 		<main>
 			<div id="horizon"></div>
